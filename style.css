@@ -47,12 +47,12 @@ html {
 }
 
 .card0 {
-  background: url(/proself.jpeg) center center no-repeat;
+  background: url(proself.jpeg) center center no-repeat;
   background-size: 600px;
 }
 
 .card0:hover {
-  background: url(/proself.jpeg) right center no-repeat;
+  background: url(proself.jpeg) right center no-repeat;
   background-size: 600px;
 }
 
@@ -64,38 +64,6 @@ html {
   opacity: 1;
 }
 
-.card1 {
-  background: url('https://i.pinimg.com/originals/28/d2/e6/28d2e684e7859a0dd17fbd0cea00f8a9.jpg')
-    center center no-repeat;
-  background-size: 300px;
-}
-.card1:hover {
-  background: url('https://i.pinimg.com/originals/28/d2/e6/28d2e684e7859a0dd17fbd0cea00f8a9.jpg')
-    left center no-repeat;
-  background-size: 600px;
-}
-.card1:hover h2 {
-  opacity: 1;
-}
-.card1:hover .fa {
-  opacity: 1;
-}
-.card2 {
-  background: url('https://i.pinimg.com/originals/ee/85/08/ee850842e68cfcf6e3943c048f45c6d1.jpg')
-    center center no-repeat;
-  background-size: 300px;
-}
-.card2:hover {
-  background: url('https://i.pinimg.com/originals/ee/85/08/ee850842e68cfcf6e3943c048f45c6d1.jpg')
-    left center no-repeat;
-  background-size: 600px;
-}
-.card2:hover h2 {
-  opacity: 1;
-}
-.card2:hover .fa {
-  opacity: 1;
-}
 h2 {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #fff;
