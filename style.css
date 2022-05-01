@@ -1,89 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body,
 html {
-  background: linear-gradient(#405f, #13ff, #ff56);
-  min-height: 100%;
-  min-width: 100%;
+  background: linear-gradient(#345f, #14ff, #ff56);
 }
 
-.container {
-  height: 100vh;
-  width: 100vw;
-  max-height: 800px;
-  max-width: 1280px;
-  min-height: 600px;
-  min-width: 1000px;
+/* navbar style */
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+/* .container {
+  max-width: 1050px;
+  width: 90%;
+  margin: auto;
+} */
+.navbar {
+  height: 62px;
+  width: 100%;
+  box-shadow: 0 1px 4px rgb(146 161 176 / 15%);
+}
+.nav-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  margin: 0 auto;
+  height: 62px;
 }
-
-.border {
-  height: 369px;
-  width: 290;
-  background: transparent;
-  border-radius: 10px;
-  transition: border 1s;
+.navbar .menu-items {
+  display: flex;
+}
+.navbar .nav-container li {
+  list-style: none;
+}
+.menu-items a {
+  text-decoration: none;
+  color: #0e2431;
+  font-weight: 500;
+  font-size: 1.2rem;
+  padding: 0.7rem;
+}
+.navbar .nav-container a:hover {
+  font-weight: bolder;
+}
+.nav-container {
+  display: block;
   position: relative;
 }
-
-.border:hover {
-  border: 1px solid #fff;
-}
-
-.card {
-  height: 379px;
-  width: 300px;
-  background: #187677;
-  border-radius: 10px;
-  transition: background 0.8s;
-  overflow: hidden;
-  background: #000;
-  box-shadow: 0 70px 63px -60px #000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
-.card0 {
-  background: url(proself.jpeg) center center no-repeat;
-  background-size: 600px;
-}
-
-.card0:hover {
-  background: url(proself.jpeg) right center no-repeat;
-  background-size: 600px;
-}
-
-.card0:hover h2 {
-  opacity: 1;
-}
-
-.card0:hover .fa {
-  opacity: 1;
-}
-
-h2 {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: #fff;
-  margin: 20px;
-  opacity: 0;
-  transition: opacity 1s;
-}
-.fa {
-  opacity: 0;
-  transition: opacity 1s;
-}
-.icons {
+.nav-container .checkbox {
   position: absolute;
-  fill: #fff;
-  color: #fff;
-  height: 130px;
-  top: 226px;
-  width: 50px;
+  display: block;
+  height: 32px;
+  width: 32px;
+  top: 20px;
+  left: 20px;
+  z-index: 90;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.nav-container .hamburger-lines {
+  display: block;
+  height: 26px;
+  width: 32px;
+  position: absolute;
+  top: 17px;
+  left: 69px;
+  z-index: 2;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
+.nav-container .hamburger-lines .line {
+  display: block;
+  height: 4px;
+  width: 100%;
+  border-radius: 10px;
+  background: #0e2431;
+}
+.nav-container .hamburger-lines .line1 {
+  transform-origin: 0% 0%;
+  transition: transform 0.4s ease-in-out;
+}
+.nav-container .hamburger-lines .line2 {
+  transition: transform 0.2s ease-in-out;
+}
+.nav-container .hamburger-lines .line3 {
+  transform-origin: 0% 100%;
+  transition: transform 0.4s ease-in-out;
+}
+.navbar .menu-items {
+  padding-top: 10px;
+  /* box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5); */
+  height: 100vh;
+  width: 100vw;
+  transform: translate(-150%);
+  display: flex;
+
+  margin-left: 40px;
+  padding-left: 40px;
+  transition: transform 0.5s ease-in;
+  text-align: center;
+  justify-content: space-evenly;
+}
+.navbar .menu-items li {
+  margin-bottom: 1.2rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.logo {
+  position: absolute;
+  top: 5px;
+  right: 99px;
+  font-size: 1.2rem;
+  color: #0e2431;
+}
+.nav-container input[type='checkbox']:checked ~ .menu-items {
+  transform: translateX(0);
+}
+.nav-container input[type='checkbox']:checked ~ .hamburger-lines .line1 {
+  transform: rotate(45deg);
+}
+.nav-container input[type='checkbox']:checked ~ .hamburger-lines .line2 {
+  transform: scaleY(0);
+}
+.nav-container input[type='checkbox']:checked ~ .hamburger-lines .line3 {
+  transform: rotate(-45deg);
+}
+.nav-container input[type='checkbox']:checked ~ .logo {
+  display: none;
+}
+
+/* Profile-card style */
+
+.card {
+  width: 30%;
+  text-align: center;
+  font-family: poppins, Helvetica, sans-serif;
+  background: linear-gradient(#000, #17ff, #ff56);
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+a {
+  padding-right: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: poppins;
+  color: black;
+}
+button:hover,
+a:hover {
+  opacity: 0.7;
+}
+
+/* ------------------- */
+
+.details-left {
+  display: flex;
+  height: 100%;
+  width: 40%;
+  background: green;
+  border: none;
+}
+.details-right {
+  display: flex;
+  top: 30px;
+  height: 100%;
+  width: 40%;
+  background: orange;
+}
+
+.details-section {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+}
+/* left section style */
+
+/* ------------------------------ */
+
+/* about us style */
+
+section {
+  padding: 6rem;
+}
+section.about h1 {
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+section.about h1 span {
+  color: var(--primary);
+}
+section.about h3 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+section.about p {
+  font-family: 'Lato', sans-serif;
+  color: var(--secondary);
+  line-height: 1.9rem;
+  margin-bottom: 2rem;
+}
+section.about .socials {
+  display: flex;
+}
+section.about .socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  margin-right: 0.8rem;
+  border-radius: 50%;
+}
+section.about .socials a:hover {
+  background: var(--primary);
+}
+/* ------------------------------ */
